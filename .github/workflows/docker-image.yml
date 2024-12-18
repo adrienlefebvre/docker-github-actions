@@ -17,6 +17,7 @@ jobs:
       with:
         username: ${{ vars.DOCKERHUB_USERNAME }}
         password: ${{ vars.DOCKERHUB_PASSWORD }}
+      run: docker login -u $username -p $password
 
   build:
 

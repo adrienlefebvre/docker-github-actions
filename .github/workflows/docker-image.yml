@@ -10,10 +10,11 @@ jobs:
 
   check:
     runs-on: ubuntu-latest
+    environment: test
     steps:
-      - 
+      -
         name: test name env var
-        run: echo "${{ secrets.DOCKER_PASSWORD }} ${{ vars.DOCKERHUB_USERNAME }}"
+        run: echo "${{ secrets.PASSWORD }}"
   login:
     runs-on: ubuntu-latest
     environment: docker-github-actions-TP
